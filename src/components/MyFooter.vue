@@ -17,7 +17,11 @@
       <span class="price">¥ {{ allPrice }}</span>
     </div>
     <!-- 按钮 -->
-    <button type="button" class="footer-btn btn btn-primary">
+    <button
+      type="button"
+      class="footer-btn btn"
+      style="background: hotpink;color: white;"
+    >
       结算 ( {{ allCount }} )
     </button>
   </div>
