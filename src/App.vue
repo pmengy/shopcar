@@ -4,7 +4,7 @@
     <div class="main">
       <MyGoods v-for="item in list" :key="item.id" :goodsObj="item" />
     </div>
-    <MyFooter />
+    <MyFooter @changeAll="all"></MyFooter>
   </div>
 </template>
 
@@ -28,6 +28,11 @@ export default {
     return {
       list: [],
     };
+  },
+  methods: {
+    all(val) {
+      this.list.forEach((obj) => (obj.goods_state = val));
+    },
   },
   created() {
     this.$axios({
