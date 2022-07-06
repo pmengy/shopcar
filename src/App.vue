@@ -1,10 +1,17 @@
 <template>
   <div>
-   nothing
+    <MyHeader />
+    <div class="main">
+      <MyGoods />
+    </div>
+    <MyFooter />
   </div>
 </template>
 
 <script>
+import MyHeader from './components/MyHeader.vue';
+import MyGoods from './components/MyGoods.vue';
+import MyFooter from './components/MyFooter.vue';
 // 目标: 项目初始化 - 静态页面
 // 1. 创建项目, 下包, 引入bs样式
 // 2. 拆分需求组件, 创建 - 分别标签+样式
@@ -17,16 +24,20 @@
 // 4. 内部使用数据对象值渲染到标签上
 
 export default {
-  data(){
-    return {
-    }
+  data() {
+    return {};
   },
-}
+  components: {
+    MyHeader,
+    MyGoods,
+    MyFooter,
+  },
+};
 </script>
 
 <style scoped>
-  .main{
-    padding-top: 45px;
-    padding-bottom: 50px;
-  }
+.main {
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
 </style>
