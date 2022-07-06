@@ -1,15 +1,29 @@
 <template>
-  <div class="my-header">购物车案例</div>
+  <div class="my-header" :style="{ background: background, color: color }">
+    {{ title }}
+  </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      
+    };
   },
-  props:{
-    
-  }
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    background: {
+      type: String,
+    },
+    color: {
+      type: String,
+      default: '#fff',
+    },
+  },
 };
 </script>
 
